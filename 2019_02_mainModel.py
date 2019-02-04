@@ -5,10 +5,13 @@
 #################################################################################
 # Audrey Lustig
 # January 2019
-#  Spread model for predicting the distribution and abundance of mammalian pests across the landscape, the ways in which animals move from their natal sites, and the effects of control intervention. In particular, the model can help managers to asses the chances of success of a management action.
+# Spread model for predicting the distribution and abundance of mammalian pests across the landscape, the ways in which animals move from their natal sites, and the effects of control intervention. In particular, the model can help managers to asses the chances of success of a management action.
 # Parameters are set to average data for possums
-# Half of the landscape (treatment area) is under homogeneous control, in the other half the population is left undisturbed and at carrying capacity
-# 20 individuals are randomly introduced in the treatment area
+# We focused on the common brushtail possum (Trichosurus vulpecula) population in the Cape-to-Citytreatment area in Te Matau a Māui/Hawke’s Bay, New Zealand
+# At the start of each simulation, the population outside the treatment area was set to carrying capacity.
+# Within the control area (24359 ha), 500 individuals (0.02 individuals/ha) were randomly located in the landscape.
+# The model was simulated using the life history, dispersal and trapability parameters for possums
+# In this example, we simulated the population for 5 years over 10 replications (control is not simulated).
 
 # Population dynamics followed for 10 years -  100 replications
 
@@ -520,7 +523,7 @@ if not os.path.exists(output_folder):
 
 
 ################### Define simulation parameter
-nbrep = 2  # number of replication
+nbrep = 10  # number of replication
 simulationTime =  5 # simulation time in years
 resolution = 500 # resolution in meters
 species= 'possum'  # names of the species (can only be 'possum' at the moment)
